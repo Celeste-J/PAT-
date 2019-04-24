@@ -1,11 +1,11 @@
 n = input()
 sum = 0
-for i in range(10):
-    sum += i * n.count(str(i))
+for i in n:
+    sum += int(i)
 
-name = ["ling","yi","er","san","si","wu","liu","qi","ba","jiu"]
+res = []
+pinyin = ['ling','yi','er','san','si','wu','liu','qi','ba','jiu']
+for j in str(sum):
+    res.append(pinyin[int(j)])
 
-for i in str(sum)[:-1]:
-    print(name[int(i)], end=' ')
-
-print(name[int(str(sum)[-1])])
+print(' '.join(res))
